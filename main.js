@@ -59,11 +59,9 @@ renderTransactionsScreen() {
 renderTransaction(transaction) {
   return (
     <View style={styles.container}>
-           <View style={styles.rightContainer}>
-             <Text style={styles.title}>{transaction.category}</Text>
-             <Text style={styles.year}>{transaction.amount}</Text>
-           </View>
-         </View>
+         <Text style={styles.category}>{transaction.category}</Text>
+         <Text style={styles.amount}>{transaction.amount}</Text>
+     </View>
   );
 }
 
@@ -87,21 +85,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    borderBottomColor: '#d3d3d3',
+    borderBottomWidth: 1,
+    paddingTop: 5,
   },
-  rightContainer: {
-    flex: 1,
-  },
-  title: {
+  category: {
     fontSize: 20,
     marginBottom: 8,
     textAlign: 'center',
   },
-  year: {
+  amount: {
     textAlign: 'center',
-  },
-  thumbnail: {
-    width: 53,
-    height: 81,
   },
   listView: {
     paddingTop: 20,
